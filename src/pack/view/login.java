@@ -42,6 +42,7 @@ public class login extends javax.swing.JFrame {
         SignIn = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -90,6 +91,10 @@ public class login extends javax.swing.JFrame {
         jButton3.setText("Exit");
         getContentPane().add(jButton3);
         jButton3.setBounds(200, 220, 80, 23);
+
+        jPanel1.setBackground(new java.awt.Color(255, 153, 153));
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 400, 300);
 
         setSize(new java.awt.Dimension(416, 338));
         setLocationRelativeTo(null);
@@ -168,6 +173,7 @@ JOptionPane.showMessageDialog(rootPane,"Gagal!");
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nama;
     private javax.swing.JPasswordField pass;
     // End of variables declaration//GEN-END:variables

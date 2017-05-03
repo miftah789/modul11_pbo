@@ -51,28 +51,31 @@ public class home extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         Admin = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Tabel1 = new javax.swing.JTable();
+        jLabel8 = new javax.swing.JLabel();
+        CariKategori = new javax.swing.JComboBox();
+        Cari = new javax.swing.JButton();
+        Nama = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        Kode = new javax.swing.JTextField();
-        Nama = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
         Harga = new javax.swing.JTextField();
         Jenis = new javax.swing.JComboBox();
-        CariKategori = new javax.swing.JComboBox();
-        jLabel8 = new javax.swing.JLabel();
         Kategori = new javax.swing.JComboBox();
-        Cari = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        Tabel1 = new javax.swing.JTable();
+        Kode = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
         Keluar = new javax.swing.JButton();
+        Hapus = new javax.swing.JButton();
+        Bersihkan = new javax.swing.JButton();
         Simpan = new javax.swing.JButton();
         Ubah = new javax.swing.JButton();
-        Bersihkan = new javax.swing.JButton();
-        Hapus = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -87,112 +90,30 @@ public class home extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(260, 20, 240, 30);
 
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setLayout(null);
+
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("Admin Toko : ");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(20, 20, 80, 30);
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(20, 10, 80, 30);
 
         Admin.setEditable(false);
+        Admin.setBackground(new java.awt.Color(204, 204, 255));
         Admin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         Admin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AdminActionPerformed(evt);
             }
         });
-        getContentPane().add(Admin);
-        Admin.setBounds(100, 20, 90, 30);
+        jPanel2.add(Admin);
+        Admin.setBounds(100, 10, 90, 30);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel3.setText("Harga");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(50, 230, 130, 30);
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 740, 60);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel4.setText("Kode Barang");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 70, 130, 30);
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel5.setText("Nama Barang");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(50, 110, 130, 30);
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel6.setText("Kategori Barang");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(50, 150, 130, 30);
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel7.setText("Jenis Packaging");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(50, 190, 130, 30);
-
-        Kode.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        Kode.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                KodeActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Kode);
-        Kode.setBounds(180, 70, 320, 30);
-
-        Nama.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        Nama.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NamaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Nama);
-        Nama.setBounds(180, 110, 320, 30);
-
-        Harga.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        getContentPane().add(Harga);
-        Harga.setBounds(180, 230, 320, 30);
-
-        Jenis.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        Jenis.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-- Pilih Jenis Packaging --", "Pack" }));
-        Jenis.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JenisActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Jenis);
-        Jenis.setBounds(180, 190, 320, 30);
-
-        CariKategori.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        CariKategori.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Makanan", "Minuman", "BarangLain" }));
-        CariKategori.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CariKategoriActionPerformed(evt);
-            }
-        });
-        getContentPane().add(CariKategori);
-        CariKategori.setBounds(320, 290, 180, 30);
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel8.setText("Pencarian Berdasarkan Kategori Makanan");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(50, 290, 270, 30);
-
-        Kategori.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        Kategori.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-- Pilih Kategori --", "Makanan", "Minuman", "BarangLain" }));
-        Kategori.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                KategoriActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Kategori);
-        Kategori.setBounds(180, 150, 320, 30);
-
-        Cari.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        Cari.setText("Cari");
-        Cari.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CariActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Cari);
-        Cari.setBounds(560, 290, 130, 30);
+        jPanel3.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel3.setLayout(null);
 
         Tabel1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -212,8 +133,103 @@ public class home extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(Tabel1);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(30, 340, 660, 200);
+        jPanel3.add(jScrollPane1);
+        jScrollPane1.setBounds(30, 290, 660, 200);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel8.setText("Pencarian Berdasarkan Kategori Makanan");
+        jPanel3.add(jLabel8);
+        jLabel8.setBounds(50, 240, 270, 30);
+
+        CariKategori.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        CariKategori.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Makanan", "Minuman", "BarangLain" }));
+        CariKategori.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CariKategoriActionPerformed(evt);
+            }
+        });
+        jPanel3.add(CariKategori);
+        CariKategori.setBounds(320, 240, 180, 30);
+
+        Cari.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        Cari.setText("Cari");
+        Cari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CariActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Cari);
+        Cari.setBounds(560, 230, 130, 30);
+
+        Nama.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        Nama.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NamaActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Nama);
+        Nama.setBounds(180, 70, 320, 30);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel4.setText("Kode Barang");
+        jPanel3.add(jLabel4);
+        jLabel4.setBounds(50, 30, 130, 30);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel5.setText("Nama Barang");
+        jPanel3.add(jLabel5);
+        jLabel5.setBounds(50, 70, 130, 30);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel6.setText("Kategori Barang");
+        jPanel3.add(jLabel6);
+        jLabel6.setBounds(50, 110, 130, 30);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel7.setText("Jenis Packaging");
+        jPanel3.add(jLabel7);
+        jLabel7.setBounds(50, 150, 130, 30);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel3.setText("Harga");
+        jPanel3.add(jLabel3);
+        jLabel3.setBounds(50, 190, 130, 30);
+
+        Harga.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jPanel3.add(Harga);
+        Harga.setBounds(180, 190, 320, 30);
+
+        Jenis.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        Jenis.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-- Pilih Jenis Packaging --", "Pack" }));
+        Jenis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JenisActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Jenis);
+        Jenis.setBounds(180, 150, 320, 30);
+
+        Kategori.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        Kategori.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-- Pilih Kategori --", "Makanan", "Minuman", "BarangLain" }));
+        Kategori.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KategoriActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Kategori);
+        Kategori.setBounds(180, 110, 320, 30);
+
+        Kode.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        Kode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KodeActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Kode);
+        Kode.setBounds(180, 30, 320, 30);
+
+        jPanel1.setBackground(new java.awt.Color(255, 204, 255));
+        jPanel1.setLayout(null);
 
         Keluar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         Keluar.setText("Keluar");
@@ -222,38 +238,8 @@ public class home extends javax.swing.JFrame {
                 KeluarActionPerformed(evt);
             }
         });
-        getContentPane().add(Keluar);
-        Keluar.setBounds(560, 230, 130, 30);
-
-        Simpan.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        Simpan.setText("Simpan");
-        Simpan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SimpanActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Simpan);
-        Simpan.setBounds(560, 70, 130, 30);
-
-        Ubah.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        Ubah.setText("Ubah");
-        Ubah.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UbahActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Ubah);
-        Ubah.setBounds(560, 110, 130, 30);
-
-        Bersihkan.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        Bersihkan.setText("Bersihkan");
-        Bersihkan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BersihkanActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Bersihkan);
-        Bersihkan.setBounds(560, 150, 130, 30);
+        jPanel1.add(Keluar);
+        Keluar.setBounds(20, 170, 130, 30);
 
         Hapus.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         Hapus.setText("Hapus");
@@ -262,8 +248,44 @@ public class home extends javax.swing.JFrame {
                 HapusActionPerformed(evt);
             }
         });
-        getContentPane().add(Hapus);
-        Hapus.setBounds(560, 190, 130, 30);
+        jPanel1.add(Hapus);
+        Hapus.setBounds(20, 130, 130, 30);
+
+        Bersihkan.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        Bersihkan.setText("Bersihkan");
+        Bersihkan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BersihkanActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Bersihkan);
+        Bersihkan.setBounds(20, 90, 130, 30);
+
+        Simpan.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        Simpan.setText("Simpan");
+        Simpan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SimpanActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Simpan);
+        Simpan.setBounds(20, 10, 130, 30);
+
+        Ubah.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        Ubah.setText("Ubah");
+        Ubah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UbahActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Ubah);
+        Ubah.setBounds(20, 50, 130, 30);
+
+        jPanel3.add(jPanel1);
+        jPanel1.setBounds(540, 10, 170, 270);
+
+        getContentPane().add(jPanel3);
+        jPanel3.setBounds(0, 70, 740, 500);
 
         setSize(new java.awt.Dimension(751, 604));
         setLocationRelativeTo(null);
@@ -405,6 +427,9 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 
